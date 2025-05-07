@@ -2,7 +2,7 @@ import sqlite3
 
 
 class Database:
-    def __init__(self, db_name='C:/Users/Пользователь/code/git-lessons/B2B/core/Bis2Bis.db'):
+    def __init__(self, db_name='C:/Users/Пользователь/code/git-lessons/B2B/B2B/core/Bis2Bis.db'):
         self.connection = sqlite3.connect(db_name)
         self.cursor = self.connection.cursor()
         self._create_tables()
@@ -40,7 +40,6 @@ class Database:
             quantity INTEGER DEFAULT 1,
             price DECIMAL(10,2) NOT NULL,
             status VARCHAR(20) DEFAULT 'new',
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
             FOREIGN KEY (buyer_id) REFERENCES Companies(company_id),
             FOREIGN KEY (seller_id) REFERENCES Companies(company_id),
