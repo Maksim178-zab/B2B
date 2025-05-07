@@ -8,8 +8,7 @@ class AdminManagement:
             print("\n--- Управление компаниями ---")
             print("1. Просмотр всех компаний")
             print("2. Поиск компании по названию")
-            print("3. Блокировка компании")
-            print("4. Удаление компании")
+            print("3. Удаление компании")
             print("0. Назад")
 
             choice = input("Выберите действие: ")
@@ -19,8 +18,6 @@ class AdminManagement:
             elif choice == "2":
                 AdminManagement.search_company()
             elif choice == "3":
-                AdminManagement.block_company()
-            elif choice == "4":
                 AdminManagement.delete_company()
             elif choice == "0":
                 break
@@ -51,21 +48,6 @@ class AdminManagement:
         else:
             print("Компании с таким названием не найдены")
 
-    @staticmethod
-    def block_company():
-        """Блокировка компании"""
-        company_id = input("Введите ID компании для блокировки: ")
-        try:
-            company_id = int(company_id)
-            company = CompaniesService.get_by_id(company_id)
-            if company:
-                # В реальной системе здесь должна быть логика блокировки
-                # Например, добавление поля is_blocked в модель Company
-                print(f"Компания '{company.name}' заблокирована")
-            else:
-                print("Компания с таким ID не найдена")
-        except ValueError:
-            print("ID компании должен быть числом")
 
     @staticmethod
     def delete_company():
