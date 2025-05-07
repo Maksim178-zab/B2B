@@ -10,8 +10,8 @@ from services.order_service import OrdersService
 from services.product_service import ProductsService
 
 from B2B.managaments.user_management import UserManagement
-from auth import authenticate, register
-from main_menu import MainMenu
+from B2B.managaments.auth import authenticate, register
+from B2B.managaments.main_menu import MainMenu
 
 __all__ = [
     'db', 'Company', 'Product', 'Order',
