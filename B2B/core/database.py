@@ -2,7 +2,7 @@ import sqlite3
 
 
 class Database:
-    def __init__(self, db_name='C:/Users/Пользователь/PycharmProjects/pythonProject1/B2B/core/Bis2Bis.db'):
+    def __init__(self, db_name='C:/Users/Пользователь/code/git-lessons/B2B/core/Bis2Bis.db'):
         self.connection = sqlite3.connect(db_name)
         self.cursor = self.connection.cursor()
         self._create_tables()
