@@ -2,7 +2,6 @@ from B2B.managaments.auth import authenticate, register
 from B2B.managaments.user_management import UserManagement
 from B2B.managaments.admin_management import AdminManagement
 
-
 class MainMenu:
     @staticmethod
     def show_auth_menu():
