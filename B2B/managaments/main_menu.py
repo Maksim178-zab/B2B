@@ -95,5 +95,3 @@ class MainMenu:
                 break
             else:
                 print("Неверный выбор. Попробуйте снова.")
-
-
